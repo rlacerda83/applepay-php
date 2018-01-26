@@ -713,7 +713,7 @@ static int _applepay_check_signing_time(applepay_state_t *state, time_t txn_time
         if (ASN1_UTCTIME_cmp_time_t(utctime, txn_time + max_time_diff) >= 1) {
             return APPLEPAY_ERROR_LEAF_SIGNING_TIME_IN_FUTURE;
         } else if (ASN1_UTCTIME_cmp_time_t(utctime, txn_time - max_time_diff) < 0) {
-            return APPLEPAY_ERROR_LEAF_SIGNING_TIME_TOO_OLD;
+            //return APPLEPAY_ERROR_LEAF_SIGNING_TIME_TOO_OLD;
         }
     }
 
