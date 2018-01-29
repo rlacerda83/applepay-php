@@ -763,7 +763,7 @@ static int _applepay_generate_secret(applepay_state_t *state) {
 
         // Initialize
         if (1 != EVP_PKEY_derive_init(ctx)) {
-            rc = state->merch_privkey;
+            rc = state->ephemeral_pubkey;
             break;
         }
 
