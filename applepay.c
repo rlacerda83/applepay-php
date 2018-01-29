@@ -763,7 +763,7 @@ static int _applepay_generate_secret(applepay_state_t *state) {
 
         // Initialize
         if (1 != EVP_PKEY_derive_init(ctx)) {
-            rc = APPLEPAY_ERROR_COULD_NOT_INIT_SECRET_CTX;
+            rc = EVP_PKEY_derive_init(ctx);
             break;
         }
 
